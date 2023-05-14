@@ -28,7 +28,7 @@
 
             <p>Alumno registrado correctamente</p>
 
-            <a href="registrarempresa.php?dni=<?php echo $dni; ?>">Editar</a>
+            <a href="registrarempresa.php?dni=<?php echo $dni; ?>">Asociar empresa</a>
                 
 
                 <!-- <p>Registrar empresa a la que va el alumno</p> -->
@@ -40,8 +40,5 @@
 		<?php		
 			}
 		?>
-
-        <p><a href="index.php">Regresar</a></p>
-    
 </body>
 </html>
