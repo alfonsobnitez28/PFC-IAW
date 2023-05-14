@@ -23,12 +23,12 @@
 
     if($resultado>0){
 		
-                // $sql2 = "SELECT id_alumno FROM alumnos WHERE dni='$dni'";
-                // $resultado2 = $mysqli->query($sql2);
 
         ?>
 
             <p>Alumno registrado correctamente</p>
+
+            <a href="registrarempresa.php?dni=<?php echo $dni; ?>">Editar</a>
                 
 
                 <!-- <p>Registrar empresa a la que va el alumno</p> -->
