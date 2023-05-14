@@ -17,25 +17,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de alumnos IES La Campiña</title>
 
-    <script>
-			$(document).ready( function () {
-				$('#tabla').DataTable();
-			} );
-		</script>
 </head>
 <body>
-
             <h1>Listado de alumnos registrados</h1>
 
-            <table id="tabla" class="display" style="width:100%">
+            <table>
 					<tr>
 						<th>Nombre</th>
-						<th>Telefono</th>
+						<th>Apellidos</th>
 						<th>Fecha de nacimiento</th>
-						<th>Categoría</th>
-						<th></th>
-						<th></th>
+						<th>D.N.I</th>
+						 <th></th> 
+						 <th></th> 
 					</tr>
+
 					<?php
 						while($fila = $resultado->fetch_assoc()){
 							echo "<tr>";
