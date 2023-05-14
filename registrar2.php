@@ -23,12 +23,13 @@
 
     if($resultado>0){
 		
-                $sql2 = "SELECT id_alumno FROM alumnos WHERE dni='$dni'";
-                $resultado2 = $mysqli->query($sql2);
+                // $sql2 = "SELECT id_alumno FROM alumnos WHERE dni='$dni'";
+                // $resultado2 = $mysqli->query($sql2);
 
         ?>
 
-                <p><a href="registrar3.php?resultado2">Registrar empresa</a></p>
+            <p>Alumno registrado correctamente</p>
+                
 
                 <!-- <p>Registrar empresa a la que va el alumno</p> -->
 		<?php
@@ -39,6 +40,8 @@
 		<?php		
 			}
 		?>
+
+        <p><a href="index.php">Regresar</a></p>
     
 </body>
 </html>
