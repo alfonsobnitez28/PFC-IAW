@@ -30,7 +30,7 @@ echo $fila ['id_alumno'];
 
             <form action="registrar4.php" id="registroemp" name="registroemp" method="post">
 
-            <input type="hidden" name="id_alumno" value="<?php echo $$fila['id_alumno']; ?>">
+            <input type="hidden" name="id_alumno" value="<?php echo $fila['id_alumno']; ?>">
 
             <label for="nombreemp">Nombre: </label>
             <input type="text" name="nombreemp" id="nombreemp" placeholder="Introduce el nombre de la empresa" required>
