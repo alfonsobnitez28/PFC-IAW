@@ -31,12 +31,13 @@
         <br>
         <br>
 
-        <label for="fecha_nac">Fecha de nacimiento (dd-mm-aaaa): </label>
+        <label for="fecha_nac">Fecha de nacimiento: </label>
 		<input type="text" name="fecha_nac" id="fecha_nac" placeholder="Introduce la fecha de nacimiento" required>
         <br>
         <br>
         <br>
 
         <input type="submit" value="Siguiente" name="siguiente">
+</form>
 </body>
 </html>

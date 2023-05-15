@@ -1,11 +1,8 @@
 <?php
-	//Establezco conexión
 	require 'conexion.php';
 	
-	//Preparo la sentencia SQL
     $sql = "SELECT * FROM alumnos";
 
-	//Ejecuto la sentencia y guardo el resultado
     $resultado = $mysqli->query($sql);
 ?>
 
@@ -43,13 +40,12 @@
 							echo "<td>$fila[dni]</td>";
 					?>
 							<td><a href="indexempresa.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Ver empresa asociada</a></td>
-							<td><a href="editar.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Editar</a></td>
+							<td><a href="editaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Editar</a></td>
 							<td><a href="eliminar.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Eliminar</a></td>
 					<?php							
 							echo "</tr>";
 						}
 					?>
-                    
 			</table>
     
 </body>
