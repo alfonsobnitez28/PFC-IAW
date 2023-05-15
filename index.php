@@ -21,12 +21,15 @@
 
 			<a href="registrar.php">Registrar</a>
 
+			<br>
+
             <table>
 					<tr>
 						<th>Nombre</th>
 						<th>Apellidos</th>
 						<th>Fecha de nacimiento</th>
 						<th>D.N.I</th>
+						 <th></th> 
 						 <th></th> 
 						 <th></th> 
 						 <th></th> 
@@ -40,6 +43,7 @@
 							echo "<td>$fila[fecha_nac]</td>";
 							echo "<td>$fila[dni]</td>";
 					?>
+							<td><a href="diarioalumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Diario del alumno</a></td>
 							<td><a href="indexempresa.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Ver empresa asociada</a></td>
 							<td><a href="editaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Editar</a></td>
 							<td><a href="eliminar.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Eliminar</a></td>
