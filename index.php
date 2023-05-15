@@ -31,6 +31,7 @@
 						<th>D.N.I</th>
 						 <th></th> 
 						 <th></th> 
+						 <th></th> 
 					</tr>
 
 					<?php
@@ -41,6 +42,7 @@
 							echo "<td>$fila[fecha_nac]</td>";
 							echo "<td>$fila[dni]</td>";
 					?>
+							<td><a href="indexempresa.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Editar</a></td>
 							<td><a href="editar.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Editar</a></td>
 							<td><a href="eliminar.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Eliminar</a></td>
 					<?php							
