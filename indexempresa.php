@@ -31,8 +31,29 @@
 
     <h1>Empresa asociada al alumno <?php echo $fila2['nombre'] ?> <?php echo $fila2['apellidos'] ?></h1>
 
-    
 
+    <table>
+					<tr>
+						<th>Nombre</th>
+						<th>Localización</th>
+						<th>C.I.F</th>
+					</tr>
+
+					<?php
+						while($fila = $resultado->fetch_assoc()){
+							echo "<tr>";
+							echo "<td>$fila[nombre]</td>";
+							echo "<td>$fila[localizacion]</td>";
+							echo "<td>$fila[cif]</td>";						
+							echo "</tr>";
+						}
+					?>
+                    
+			</table>
+
+            <p><a href="editarempresa.php?id_empresa=<?php echo $fila['id_empresa']; ?>">Editar datos de la empresa</a></p>
+            <br>
+            <p><a href="index.php">Volver</a></p>
     
 </body>
 </html>

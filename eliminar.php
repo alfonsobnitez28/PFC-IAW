@@ -14,12 +14,16 @@
 			require 'conexion.php';
 			
 			
-			$sql = "DELETE FROM alumnos WHERE id_alumno=$id_alumno";
+			$sql = "DELETE FROM empresas WHERE id_alumno='$id_alumno'";
 
-			//Ejecutamos sentencia y guardamos resultado
 			$resultado = $mysqli->query($sql);
 
-			if($resultado>0){
+			$sql2 = "DELETE FROM alumnos WHERE id_alumno='$id_alumno'";
+
+			$resultado2 = $mysqli->query($sql2);
+
+
+			if($resultado && $resultado2>0){
 		?>
 				<br>
 				<p>Alumno eliminado de la base de datos</p>
