@@ -52,7 +52,7 @@ echo $fila ['id_alumno'];
     <br>
 
 
-            <input type="submit" value="Finalizar" name="Finalizar">
+            <input type="submit" value="Finalizar" name="finalizar">
 
 
     

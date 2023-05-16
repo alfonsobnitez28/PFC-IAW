@@ -28,7 +28,7 @@
 <body>
     <h1>Diario del alumno <?php echo $fila2['nombre'] ?> <?php echo $fila2['apellidos'] ?></h1>
 
-    <a href="añadirentrada.php">Añadir entrada</a>
+    <a href="añadirentrada.php?id_alumno=<?php echo $id_alumno ?>">Añadir entrada</a>
 
     <br>
 
