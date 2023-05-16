@@ -34,7 +34,7 @@
 <body>
 		<div class="container-fluid px-4 py-4">
 			<div class="sticky-top my-lg-5">
-				<h1>ALUMNOS REGISTRADOS</h1>
+				<h1 class="h1">Alumnos de prácticas</h1>
 			</div>
 
 			<div class="col">
@@ -76,6 +76,6 @@
 					?>
 					</tbody>
 			</table>
-    
+			</div>
 </body>
 </html>
