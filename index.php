@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/jquery.dataTables.min.css">
@@ -23,15 +23,29 @@
 	<link rel="shortcut icon" href="descarga.png">
     <title>Gestión de alumnos IES La Campiña</title>
 
+	<script>
+			// DataTables
+			$(document).ready( function () {
+   			 $('#tabla').DataTable();
+			} );
+		</script>
+
 </head>
 <body>
-            <h1 class="text-center">Listado de alumnos registrados</h1>
+		<div class="container-fluid px-4 py-4">
+			<div class="sticky-top my-lg-5">
+				<h1>ALUMNOS REGISTRADOS</h1>
+			</div>
 
-			<a href="registrar.php">Registrar</a>
+			<div class="col">
+			<a href="registrar.php" class="btn btn-primary">Registrar</a>
 
+			</div>
+			<br>
 			<br>
 
-            <table>
+            <table id="tabla" class="table table-striped table-hover" style="width:100%">
+				<thead>
 					<tr>
 						<th>Nombre</th>
 						<th>Apellidos</th>
@@ -42,7 +56,8 @@
 						 <th></th> 
 						 <th></th> 
 					</tr>
-
+					</thead>
+					<tbody>
 					<?php
 						while($fila = $resultado->fetch_assoc()){
 							echo "<tr>";
@@ -51,14 +66,15 @@
 							echo "<td>$fila[fecha_nac]</td>";
 							echo "<td>$fila[dni]</td>";
 					?>
-							<td><a href="diarioalumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Diario del alumno</a></td>
-							<td><a href="indexempresa.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Ver empresa asociada</a></td>
-							<td><a href="editaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Editar</a></td>
-							<td><a href="eliminar.php?id_alumno=<?php echo $fila['id_alumno']; ?>">Eliminar</a></td>
+							<td><a href="diarioalumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-info">Diario del alumno</a></td>
+							<td><a href="indexempresa.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-dark">Ver empresa asociada</a></td>
+							<td><a href="editaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-warning">Editar</a></td>
+							<td><a href="eliminar.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-danger">Eliminar</a></td>
 					<?php							
 							echo "</tr>";
 						}
 					?>
+					</tbody>
 			</table>
     
 </body>
