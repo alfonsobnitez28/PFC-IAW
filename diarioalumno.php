@@ -12,9 +12,6 @@
     $resultado2 = $mysqli->query($sql2);
 
     $fila2 = $resultado2->fetch_assoc();
-
-
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +42,7 @@
 							echo "<td>$fila[fecha]</td>";
 							echo "<td>$fila[entrada]</td>";
                     ?>
-                            <td><a href="eliminar.php?id_entrada=<?php echo $fila['id_entrada']; ?>">Eliminar entrada</a></td>
+                            <td><a href="eliminarentrada.php?id_entrada=<?php echo $fila['id_entrada']; ?>">Eliminar entrada</a></td>
                     <?php
 							echo "</tr>";
 						}
