@@ -31,13 +31,21 @@
     <title>Gestión de alumnos IES La Campiña</title>
 </head>
 <body>
-    <h1>Diario del alumno <?php echo $fila2['nombre'] ?> <?php echo $fila2['apellidos'] ?></h1>
 
-    <a href="añadirentrada.php?id_alumno=<?php echo $id_alumno ?>">Añadir entrada</a>
+	<div class="container">
+	
+    <div class="sticky-top my-lg-5">
+
+    <h1>Diario del alumno <?php echo $fila2['nombre'] ?> <?php echo $fila2['apellidos'] ?></h1>
+	</div>
+
+	<div class="col">
+    <a href="añadirentrada.php?id_alumno=<?php echo $id_alumno ?>" class="btn btn-outline-info">Añadir entrada</a>
+	</div>
 
     <br>
 
-    <table>
+    <table class="table table-striped table-borderless" style="width:100%">
 					<tr>
 						<th>Fecha</th>
 						<th>Contenido</th>
@@ -50,7 +58,7 @@
 							echo "<td>$fila[fecha]</td>";
 							echo "<td>$fila[entrada]</td>";
                     ?>
-                            <td><a href="eliminarentrada.php?id_entrada=<?php echo $fila['id_entrada']; ?>">Eliminar entrada</a></td>
+                            <td><a href="eliminarentrada.php?id_entrada=<?php echo $fila['id_entrada']; ?>" class="btn btn-outline-danger">Eliminar entrada</a></td>
                     <?php
 							echo "</tr>";
 						}
@@ -58,7 +66,7 @@
                     
 			</table>
             <br>
-            <p><a href="index.php">Volver</a></p>
+            <p><a href="index.php" class="btn btn-outline-secondary">Volver</a></p>
     
 </body>
 </html>

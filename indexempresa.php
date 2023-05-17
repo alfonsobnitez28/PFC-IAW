@@ -42,6 +42,7 @@
     <div class="sticky-top my-lg-5">
 
         <h1>Empresa asociada al alumno <?php echo $fila2['nombre'] ?> <?php echo $fila2['apellidos'] ?></h1>
+	</div>
 
 
         <table class="table table-striped table-borderless" style="width:100%">
@@ -69,6 +70,7 @@
             <p><a href="editarempresa.php?id_empresa=<?php echo $fila['id_empresa']; ?>" class="btn btn-outline-warning">Editar datos de la empresa</a></p>
             <br>
             <p><a href="index.php" class="btn btn-outline-secondary">Volver</a></p>
+		</div>
     
 </body>
 </html>

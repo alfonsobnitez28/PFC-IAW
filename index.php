@@ -6,9 +6,9 @@
     $resultado = $mysqli->query($sql);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,15 +30,15 @@
 			} );
 		</script>
 
-</head>
-<body>
+		</head>
+		<body>
 		<div class="container-fluid px-4 py-4">
 			<div class="sticky-top my-lg-5">
 				<h1 class="h1">Alumnos de prácticas</h1>
 			</div>
 
 			<div class="col">
-			<a href="registrar.php" class="btn btn-primary">Registrar</a>
+			<a href="registrar.php" class="btn btn-outline-success">Registrar</a>
 
 			</div>
 			<br>
