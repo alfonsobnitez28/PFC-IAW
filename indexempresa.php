@@ -67,7 +67,7 @@
                     </tbody>
 			</table>
 
-            <p><a href="editarempresa.php?id_empresa=<?php echo $fila['id_empresa']; ?>" class="btn btn-outline-warning">Editar datos de la empresa</a></p>
+            <p><a href="editarempresa.php?id_empresa=<?php echo $fila['id_empresa'];?>" class="btn btn-outline-warning">Editar datos de la empresa</a></p>
             <br>
             <p><a href="index.php" class="btn btn-outline-secondary">Volver</a></p>
 		</div>
