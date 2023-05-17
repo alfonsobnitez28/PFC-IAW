@@ -1,15 +1,14 @@
 <?php
     require 'conexion.php';
 
-    $id_alumno=$_GET['id_alumno'];
+    $id_empresa=$_GET['id_empresa'];
 
-    $sql = "SELECT * FROM alumnos WHERE id_alumno='$id_alumno'";
+    $sql = "SELECT * FROM alumnos WHERE id_empresa='$id_empresa'";
 
     $resultado = $mysqli->query($sql);
 
     $fila = $resultado->fetch_assoc();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,47 +28,43 @@
 </head>
     <body>
 
+
     <div class="container">
 
     <div class="sticky-top my-lg-5">
 
-    <h2>Editar datos del alumno <?php echo $fila['nombre'];?> <?php echo $fila['apellidos'];?> </h2>
+    <h2>Editar datos de la empresa</h2>
 
     </div>
-    
-    <form action="editaralumno2.php" id="editaralumno" name="editaralumno" method="post">
+
+    <form action="editarempresa2.php" id="editarempresa" name="editarempresa" method="post">
     <div class="form-group">
 
-        <input type="hidden" name="id_alumno" value="<?php echo $fila['id_alumno']; ?>">
+        <input type="hidden" name="id_empresa" value="<?php echo $fila['id_empresa']; ?>">
 
-        <label for="nombre">Nombre: </label>
-		<input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $fila['nombre'];?>" required>
+        <label for="nombreemp">Nombre: </label>
+		<input type="text" class="form-control" name="nombreemp" id="nombreemp" value="<?php echo $fila['nombre'];?>" required>
         <br>
         <br>
         <br>
     
-        <label for="apellidos">Apellidos: </label>
-		<input type="text" name="apellidos" class="form-control" id="apellidos" value="<?php echo $fila['apellidos'];?>" required>
+        <label for="localizacion">Localización: </label>
+		<input type="text" name="localizacion" class="form-control" id="localizacion" value="<?php echo $fila['localizacion'];?>" required>
         <br>
         <br>
         <br>
 
-        <label for="dni">D.N.I: </label>
-		<input type="text" name="dni" class="form-control" id="dni" value="<?php echo $fila['dni'];?>" required>
+        <label for="cif">C.I.F: </label>
+		<input type="text" name="cif" class="form-control" id="cif" value="<?php echo $fila['cif'];?>" required>
         <br>
         <br>
         <br>
 
-        <label for="fecha_nac">Fecha de nacimiento: </label>
-		<input type="text" name="fecha_nac" class="form-control" id="fecha_nac" value="<?php echo $fila['fecha_nac'];?>" required>
-        <br>
-        <br>
-        <br>
 
         <a href="index.php" class="btn btn-outline-danger">Volver</a>
         <input type="submit" class="btn btn-outline-dark" value="Editar" name="editar">
 
-        </form>
+
     </div>
 </body>
 </html>
