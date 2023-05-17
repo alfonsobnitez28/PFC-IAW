@@ -62,7 +62,7 @@
 							echo "<td>$fila[localizacion]</td>";
 							echo "<td>$fila[cif]</td>";						
 							echo "</tr>";
-						}
+						
 					?>
                     </tbody>
 			</table>
@@ -70,6 +70,10 @@
             <p><a href="editarempresa.php?id_empresa=<?php echo $fila['id_empresa'];?>" class="btn btn-outline-warning">Editar datos de la empresa</a></p>
             <br>
             <p><a href="index.php" class="btn btn-outline-secondary">Volver</a></p>
+
+			<?php
+			};
+			?>
 		</div>
     
 </body>
