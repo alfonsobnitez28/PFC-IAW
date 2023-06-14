@@ -20,42 +20,30 @@
 
 	<div class="sticky-top my-lg-5">
 
-	<h2>Eliminar empresa</h2>
+	<h2>Eliminar alumno</h2>
 
 	</div>
 
 
     <?php
-			$id_empresa = $_GET['id_empresa'];
+			$id_alumno = $_GET['id_alumno'];
 
 			require 'conexion.php';
 
-			$sql4 = "SELECT id_alumno FROM alumnos WHERE id_empresa='$id_empresa'";
-
-			$resultado4 = $mysqli->query($sql4);
-
-			$fila4 = $resultado4->fetch_assoc();
-
 			
-			
-			$sql = "DELETE FROM entradas WHERE id_alumno='$fila4[id_alumno]'";
+			$sql = "DELETE FROM entradas WHERE id_alumno='$id_alumno'";
 
 			$resultado = $mysqli->query($sql);
 
-			$sql3 = "DELETE FROM alumnos WHERE id_alumno='$fila4[id_alumno]'";
+			$sql3 = "DELETE FROM alumnos WHERE id_alumno='$id_alumno'";
 
 			$resultado3 = $mysqli->query($sql3);
 
 
-			$sql2 = "DELETE FROM empresas WHERE id_empresa='$id_empresa'";
-
-			$resultado2 = $mysqli->query($sql2);
-
-
-			if($resultado && $resultado2 && $resultado3>0){
+			if($resultado && $resultado3>0){
 		?>
 				<br>
-				<p class="alert alert-danger" role="alert">La empresa y todos sus datos relacionados han sido eliminados con éxito.</p>
+				<p class="alert alert-danger" role="alert">El alumno y todos sus datos relacionados han sido eliminados con éxito.</p>
 		<?php
 			} else {
 		?>

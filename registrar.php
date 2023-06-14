@@ -1,3 +1,9 @@
+<?php
+	require 'conexion.php';
+	
+    $id_empresa=$_GET['id_empresa'];
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +34,7 @@
 
     <div class="form-group">
 
-        <input type="hidden" name="id_empresa" value="<?php echo $fila['id_empresa']; ?>">
+        <input type="hidden" name="id_empresa" value="<?php echo $id_empresa; ?>">
 
         <label for="nombre">Nombre: </label>
 		<input type="text" class="form-control" name="nombre" id="nombre" placeholder="Introduce el nombre" required>
@@ -48,7 +54,7 @@
         <br>
         <br>
 
-        <label for="fecha_nac">Fecha de nacimiento: </label>
+        <label for="fecha_nac">Fecha de nacimiento (aaaa-mm-dd): </label>
 		<input type="text" class="form-control" name="fecha_nac" id="fecha_nac" placeholder="Introduce la fecha de nacimiento" required>
         <br>
         <br>

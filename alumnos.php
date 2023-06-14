@@ -41,10 +41,10 @@
 	
     <div class="sticky-top my-lg-5">
 
-        <h1>Alumnos de la empresa <?php echo $fila2['nombre']?></h1>
+        <h1>Alumnos de la empresa <?php echo $fila2['nombre'];?></h1>
 	</div>
 
-	<a href="registrar.php?id_empresa=<?php echo $fila['id_empresa'];?>" class="btn btn-outline-success">Registrar</a>
+	<a href="registrar.php?id_empresa=<?php echo $id_empresa?>" class="btn btn-outline-success">Registrar</a>
 
 
         <table class="table table-striped table-borderless" style="width:100%">
@@ -54,6 +54,7 @@
 						<th>Apellidos</th>
 						<th>D.N.I</th>
 						<th>Fecha de nacimiento</th>
+						<th></th>
 						<th></th>
 						<th></th>
 					</tr>
@@ -66,16 +67,17 @@
 							echo "<td>$fila[nombre]</td>";
 							echo "<td>$fila[apellidos]</td>";
 							echo "<td>$fila[dni]</td>";	
-							echo "<td>$fila[fecha_nac]</td>";						
+							echo "<td>$fila[fecha_nac]</td>";	
+							?>		
+							<td><a href="diarioalumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-info">Diario del alumno</a></td>
+							<td><a href="editaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-warning">Editar</a></td>
+							<td><a href="eliminaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-danger">Eliminar</a></td>		
+							<?php	
 							echo "</tr>";
 						
 					?>
                     </tbody>
 			</table>
-
-			<td><a href="diarioalumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-info">Diario del alumno</a></td>
-			<td><a href="editaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-warning">Editar</a></td>
-			<td><a href="eliminaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-danger">Eliminar</a></td>
             <br>
             <p><a href="index.php" class="btn btn-outline-secondary">Volver</a></p>
 

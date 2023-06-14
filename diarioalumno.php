@@ -7,7 +7,7 @@
 
     $resultado = $mysqli->query($sql);
 
-    $sql2 = "SELECT nombre, apellidos FROM alumnos where id_alumno='$id_alumno'";
+    $sql2 = "SELECT * FROM alumnos where id_alumno='$id_alumno'";
 
     $resultado2 = $mysqli->query($sql2);
 
@@ -66,7 +66,7 @@
                     
 			</table>
             <br>
-            <p><a href="index.php" class="btn btn-outline-secondary">Volver</a></p>
+            <p><a href="alumnos.php?id_empresa=<?php echo $fila2['id_empresa']; ?>" class="btn btn-outline-secondary">Volver</a></p>
     
 </body>
 </html>

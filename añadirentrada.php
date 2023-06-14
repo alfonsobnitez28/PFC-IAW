@@ -43,7 +43,7 @@
 
         <input type="hidden" name="id_alumno" value="<?php echo $id_alumno; ?>">
 
-        <label for="fecha">Fecha: </label>
+        <label for="fecha">Fecha (aaaa-mm-dd): </label>
 		<input type="text" class="form-control" name="fecha" id="fecha_nac" placeholder="Introduce la fecha" required>
         <br>
         <br>
