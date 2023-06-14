@@ -20,19 +20,18 @@
 
     <div class="sticky-top my-lg-5">
 
-    <h2>Datos del alumno para registrar</h2>
+    <h2>Registrar empresa</h2>
 
     </div>
 
     <?php
         require 'conexion.php';
 
-        $id_alumno=$_POST['id_alumno'];
         $nombreemp=$_POST['nombreemp'];
         $localizacion=$_POST['localizacion'];
         $cif=$_POST['cif'];
 
-        $sql = "INSERT INTO empresas (id_alumno,nombre,localizacion,cif) VALUES ('$id_alumno','$nombreemp','$localizacion','$cif')";
+        $sql = "INSERT INTO empresas (nombre,localizacion,cif) VALUES ('$nombreemp','$localizacion','$cif')";
 
         $resultado = $mysqli->query($sql);
 
@@ -41,7 +40,7 @@
 
             ?>
     
-                <p class="alert alert-success" role="alert">¡¡Proceso finalizado. El alumno y empresa han sido registrados correctamente!!</p>
+                <p class="alert alert-success" role="alert">¡¡Proceso finalizado. Empresa añadida correctamente!!</p>
                 <br>
                 <br>
     

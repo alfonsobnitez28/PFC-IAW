@@ -41,7 +41,6 @@
     <div class="form-group">
 
         <input type="hidden" name="id_empresa" value="<?php echo $fila['id_empresa']; ?>">
-        <input type="hidden" name="id_alumno" value="<?php echo $fila['id_alumno']; ?>">
 
         <label for="nombreemp">Nombre: </label>
 		<input type="text" class="form-control" name="nombreemp" id="nombreemp" value="<?php echo $fila['nombre'];?>" required>
@@ -62,7 +61,7 @@
         <br>
 
 
-        <a href="indexempresa.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-danger">Volver</a>
+        <a href="index.php" class="btn btn-outline-danger">Volver</a>
         <input type="submit" class="btn btn-outline-dark" value="Editar" name="editar">
 
 

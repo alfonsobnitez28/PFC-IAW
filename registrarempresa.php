@@ -1,18 +1,3 @@
-<?php
-
-require 'conexion.php';
-
-$dni=$_GET['dni'];
-
-$sql = "SELECT id_alumno FROM alumnos WHERE dni='$dni'";
-
-$id_alumno = $mysqli->query($sql);
-
-$fila = $id_alumno->fetch_assoc();
-
-// echo $fila ['id_alumno'];
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,15 +20,13 @@ $fila = $id_alumno->fetch_assoc();
 	
         <div class="sticky-top my-lg-5">
 
-        <h2>Datos de la empresa asignada</h2>
+        <h2>Añadir empresa</h2>
 
         </div>
 
             <form action="registrar4.php" id="registroemp" name="registroemp" method="post">
 
             <div class="form-group">
-
-            <input type="hidden" name="id_alumno" value="<?php echo $fila['id_alumno']; ?>">
 
             <label for="nombreemp">Nombre: </label>
             <input type="text" class="form-control" name="nombreemp" id="nombreemp" placeholder="Introduce el nombre de la empresa" required>
@@ -64,7 +47,7 @@ $fila = $id_alumno->fetch_assoc();
     <br>
 
 
-            <input type="submit" class="btn btn-outline-dark" value="Finalizar" name="finalizar">
+            <input type="submit" class="btn btn-outline-dark" value="Añadir" name="añadir">
 
             </div>
 

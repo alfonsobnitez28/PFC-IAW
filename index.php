@@ -1,7 +1,7 @@
 <?php
 	require 'conexion.php';
 	
-    $sql = "SELECT * FROM alumnos";
+    $sql = "SELECT * FROM empresas";
 
     $resultado = $mysqli->query($sql);
 ?>
@@ -38,7 +38,7 @@
 			</div>
 
 			<div class="col">
-			<a href="registrar.php" class="btn btn-outline-success">Registrar</a>
+			<a href="registrarempresa.php" class="btn btn-outline-success">Registrar empresa</a>
 
 			</div>
 			<br>
@@ -48,9 +48,8 @@
 				<thead>
 					<tr>
 						<th>Nombre</th>
-						<th>Apellidos</th>
-						<th>Fecha de nacimiento</th>
-						<th>D.N.I</th>
+						<th>Localización</th>
+						<th>C.I.F.</th>
 						 <th></th> 
 						 <th></th> 
 						 <th></th> 
@@ -62,14 +61,12 @@
 						while($fila = $resultado->fetch_assoc()){
 							echo "<tr>";
 							echo "<td>$fila[nombre]</td>";
-							echo "<td>$fila[apellidos]</td>";
-							echo "<td>$fila[fecha_nac]</td>";
-							echo "<td>$fila[dni]</td>";
+							echo "<td>$fila[localizacion]</td>";
+							echo "<td>$fila[cif]</td>";
 					?>
-							<td><a href="diarioalumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-info">Diario del alumno</a></td>
-							<td><a href="indexempresa.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-dark">Ver empresa asociada</a></td>
-							<td><a href="editaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-warning">Editar</a></td>
-							<td><a href="eliminar.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-danger">Eliminar</a></td>
+							<td><a href="alumnos.php?id_empresa=<?php echo $fila['id_empresa']; ?>" class="btn btn-outline-dark">Ver alumnos de la empresa</a></td>
+							<td><a href="editarempresa.php?id_empresa=<?php echo $fila['id_empresa']; ?>" class="btn btn-outline-warning">Editar</a></td>
+							<td><a href="eliminar.php?id_empresa=<?php echo $fila['id_empresa']; ?>" class="btn btn-outline-danger">Eliminar</a></td>
 					<?php							
 							echo "</tr>";
 						}

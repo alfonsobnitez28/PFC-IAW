@@ -18,7 +18,6 @@
     <?php
     require 'conexion.php';
     
-    $id_alumno=$_POST['id_alumno'];
     $id_empresa=$_POST['id_empresa'];
     $nombreemp=$_POST['nombreemp'];
     $cif=$_POST['cif'];
@@ -37,7 +36,7 @@
 
 	<?php
 
-    $sql = "UPDATE empresas SET nombre='$nombreemp', localizacion='$localizacion', cif='$cif', id_alumno='$id_alumno' WHERE id_empresa=$id_empresa";
+    $sql = "UPDATE empresas SET nombre='$nombreemp', localizacion='$localizacion', cif='$cif' WHERE id_empresa=$id_empresa";
 
     $resultado = $mysqli->query($sql);
 
