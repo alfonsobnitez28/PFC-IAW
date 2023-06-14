@@ -31,10 +31,11 @@
 	$apellidos = $_POST['apellidos'];
 	$dni = $_POST['dni'];
 	$fecha_nac = $_POST['fecha_nac'];
+    $id_empresa=$_POST['id_empresa'];
 
     require 'conexion.php';
 
-    $sql = "INSERT INTO alumnos (nombre,apellidos,dni,fecha_nac) VALUES ('$nombre','$apellidos','$dni','$fecha_nac')";
+    $sql = "INSERT INTO alumnos (nombre,apellidos,dni,fecha_nac,id_empresa) VALUES ('$nombre','$apellidos','$dni','$fecha_nac','$id_empresa')";
 
     $resultado = $mysqli->query($sql);
 
@@ -47,7 +48,6 @@
             <br> 
             <br>
 
-            <a href="registrarempresa.php?dni=<?php echo $dni; ?>" class="btn btn-outline-dark">Asociar empresa</a>
                 
 
                 <!-- <p>Registrar empresa a la que va el alumno</p> -->
@@ -59,10 +59,10 @@
             <br> 
             <br>
 
-            <p><a href="index.php" class="btn btn-outline-dark">Inicio</a></p>
 		<?php		
 			}
 		?>
+        <p><a href="index.php" class="btn btn-outline-dark">Inicio</a></p>
 
 </div>
 </body>

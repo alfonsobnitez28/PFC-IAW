@@ -34,7 +34,7 @@
 		<body>
 		<div class="container-fluid px-4 py-4">
 			<div class="sticky-top my-lg-5">
-				<h1 class="h1">Alumnos de prácticas</h1>
+				<h1 class="h1">Listado de empresas registradas</h1>
 			</div>
 
 			<div class="col">
@@ -50,7 +50,6 @@
 						<th>Nombre</th>
 						<th>Localización</th>
 						<th>C.I.F.</th>
-						 <th></th> 
 						 <th></th> 
 						 <th></th> 
 						 <th></th> 

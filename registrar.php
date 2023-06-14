@@ -28,6 +28,8 @@
 
     <div class="form-group">
 
+        <input type="hidden" name="id_empresa" value="<?php echo $fila['id_empresa']; ?>">
+
         <label for="nombre">Nombre: </label>
 		<input type="text" class="form-control" name="nombre" id="nombre" placeholder="Introduce el nombre" required>
         <br>

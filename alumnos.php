@@ -1,13 +1,13 @@
 <?php
 	require 'conexion.php';
 	
-    $id_alumno=$_GET['id_alumno'];
+    $id_empresa=$_GET['id_empresa'];
 	
-    $sql = "SELECT * FROM empresas where id_alumno='$id_alumno'";
+    $sql = "SELECT * FROM alumnos where id_empresa='$id_empresa'";
 
     $resultado = $mysqli->query($sql);
 
-    $sql2 = "SELECT nombre, apellidos FROM alumnos where id_alumno='$id_alumno'";
+    $sql2 = "SELECT nombre FROM empresas where id_empresa='$id_empresa'";
 
     $resultado2 = $mysqli->query($sql2);
 
@@ -41,16 +41,21 @@
 	
     <div class="sticky-top my-lg-5">
 
-        <h1>Empresa asociada al alumno <?php echo $fila2['nombre'] ?> <?php echo $fila2['apellidos'] ?></h1>
+        <h1>Alumnos de la empresa <?php echo $fila2['nombre']?></h1>
 	</div>
+
+	<a href="registrar.php?id_empresa=<?php echo $fila['id_empresa'];?>" class="btn btn-outline-success">Registrar</a>
 
 
         <table class="table table-striped table-borderless" style="width:100%">
             <thead>
 					<tr>
 						<th>Nombre</th>
-						<th>Localización</th>
-						<th>C.I.F</th>
+						<th>Apellidos</th>
+						<th>D.N.I</th>
+						<th>Fecha de nacimiento</th>
+						<th></th>
+						<th></th>
 					</tr>
                     </thead>
                     <tbody>
@@ -59,15 +64,18 @@
 						while($fila = $resultado->fetch_assoc()){
 							echo "<tr>";
 							echo "<td>$fila[nombre]</td>";
-							echo "<td>$fila[localizacion]</td>";
-							echo "<td>$fila[cif]</td>";						
+							echo "<td>$fila[apellidos]</td>";
+							echo "<td>$fila[dni]</td>";	
+							echo "<td>$fila[fecha_nac]</td>";						
 							echo "</tr>";
 						
 					?>
                     </tbody>
 			</table>
 
-            <p><a href="editarempresa.php?id_empresa=<?php echo $fila['id_empresa'];?>" class="btn btn-outline-warning">Editar datos de la empresa</a></p>
+			<td><a href="diarioalumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-info">Diario del alumno</a></td>
+			<td><a href="editaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-warning">Editar</a></td>
+			<td><a href="eliminaralumno.php?id_alumno=<?php echo $fila['id_alumno']; ?>" class="btn btn-outline-danger">Eliminar</a></td>
             <br>
             <p><a href="index.php" class="btn btn-outline-secondary">Volver</a></p>
 
