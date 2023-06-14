@@ -20,53 +20,42 @@
 
     <div class="sticky-top my-lg-5">
 
-    <h2>Registrar empresa</h2>
+    <h2>Añadir entrada</h2>
 
     </div>
 
     <?php
         require 'conexion.php';
 
-        $nombreemp=$_POST['nombreemp'];
-        $localizacion=$_POST['localizacion'];
-        $cif=$_POST['cif'];
+        $id_alumno=$_POST['id_alumno'];
+        $fecha=$_POST['fecha'];
+        $entrada=$_POST['entrada'];
+        $id_entrada=$_POST['id_entrada'];
 
-        $sql1 = "SELECT * FROM empresas WHERE cif = '$cif'";
-        $resultado1 = $mysqli->query($sql1);
-        if (mysqli_num_rows($resultado1) > 0) {
-    
-            echo '<p class="alert alert-danger" role="alert">La empresa ya esta registrada.</p>';
-    
-        } else {
-
-        $sql = "INSERT INTO empresas (nombre,localizacion,cif) VALUES ('$nombreemp','$localizacion','$cif')";
+        $sql = "UPDATE entradas (fecha,entrada) VALUES ('$fecha','$entrada') where id_entrada='$id_entrada'";
 
         $resultado = $mysqli->query($sql);
 
         if($resultado>0){
-		
 
             ?>
     
-                <p class="alert alert-success" role="alert">¡¡Proceso finalizado. Empresa añadida correctamente!!</p>
+                <p class="alert alert-success" role="alert">Entrada añadida con éxito.</p>
+                <br>
                 <br>
                 <br>
     
-                
+    
             <?php
                 } else {
             ?>
-                    <p class="alert alert-danger" role="alert">Ha ocurrido un error.</p>
-                    <br> 
                     <br>
+                      <p class="alert alert-danger" role="alert">Ha ocurrido un error.</p>
             <?php		
                 }
-            }
             ?>
 
-        <p><a href="index.php" class="btn btn-outline-dark">Inicio</a></p>
-
-        </div>
+        <p><a href="diarioalumno.php?id_alumno=<?php echo $id_alumno ?>" class="btn btn-outline-dark">Ver diario</a></p>
     
 </body>
 </html>

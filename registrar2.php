@@ -35,6 +35,14 @@
 
     require 'conexion.php';
 
+    $sql1 = "SELECT * FROM alumnos WHERE dni = '$dni'";
+    $resultado1 = $mysqli->query($sql1);
+    if (mysqli_num_rows($resultado1) > 0) {
+
+        echo '<p class="alert alert-danger" role="alert">El alumno ya esta registrado.</p>';
+
+    } else {
+
     $sql = "INSERT INTO alumnos (nombre,apellidos,dni,fecha_nac,id_empresa) VALUES ('$nombre','$apellidos','$dni','$fecha_nac','$id_empresa')";
 
     $resultado = $mysqli->query($sql);
@@ -47,10 +55,6 @@
             <p class="alert alert-success" role="alert">¡¡Alumno registrado correctamente!!</p>
             <br> 
             <br>
-
-                
-
-                <!-- <p>Registrar empresa a la que va el alumno</p> -->
 		<?php
 		} else {
 		?>
@@ -61,6 +65,7 @@
 
 		<?php		
 			}
+        }
 		?>
         <p><a href="index.php" class="btn btn-outline-dark">Inicio</a></p>
 

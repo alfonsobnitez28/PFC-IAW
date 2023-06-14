@@ -75,15 +75,14 @@
 							<?php	
 							echo "</tr>";
 						
-					?>
+						};
+						?>
                     </tbody>
 			</table>
+			
             <br>
             <p><a href="index.php" class="btn btn-outline-secondary">Volver</a></p>
 
-			<?php
-			};
-			?>
 		</div>
     
 </body>

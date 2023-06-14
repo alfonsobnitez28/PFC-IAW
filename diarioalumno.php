@@ -50,6 +50,7 @@
 						<th>Fecha</th>
 						<th>Contenido</th>
 						<th></th>
+						<th></th>
 					</tr>
 
 					<?php
@@ -58,6 +59,7 @@
 							echo "<td>$fila[fecha]</td>";
 							echo "<td>$fila[entrada]</td>";
                     ?>
+							<td><a href="editarentrada.php?id_entrada=<?php echo $fila['id_entrada']; ?>" class="btn btn-outline-warning">Editar entrada</a></td>
                             <td><a href="eliminarentrada.php?id_entrada=<?php echo $fila['id_entrada']; ?>" class="btn btn-outline-danger">Eliminar entrada</a></td>
                     <?php
 							echo "</tr>";
