@@ -32,7 +32,7 @@
         $entrada=$_POST['entrada'];
         $id_entrada=$_POST['id_entrada'];
 
-        $sql = "UPDATE entradas (fecha,entrada) VALUES ('$fecha','$entrada') where id_entrada='$id_entrada'";
+        $sql = "UPDATE entradas SET fecha='$fecha',entrada='$entrada' where id_entrada=$id_entrada";
 
         $resultado = $mysqli->query($sql);
 
@@ -40,7 +40,7 @@
 
             ?>
     
-                <p class="alert alert-success" role="alert">Entrada añadida con éxito.</p>
+                <p class="alert alert-success" role="alert">Entrada modificada con éxito.</p>
                 <br>
                 <br>
                 <br>

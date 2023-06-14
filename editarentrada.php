@@ -59,7 +59,7 @@
 
         <a href="diarioalumno.php?id_alumno=<?php echo $fila['id_alumno'];?>" class="btn btn-outline-danger">Volver</a>
 
-        <input type="submit" class="btn btn-outline-dark" value="Añadir" name="añadir">
+        <input type="submit" class="btn btn-outline-dark" value="Editar" name="editar">
 
     </div>
 
