@@ -67,7 +67,7 @@
 			}
         }
 		?>
-        <p><a href="index.php" class="btn btn-outline-dark">Inicio</a></p>
+        <p><a href="alumnos.php?id_empresa=<?php echo $id_empresa; ?>" class="btn btn-outline-dark">Ver alumnos</a></p>
 
 </div>
 </body>

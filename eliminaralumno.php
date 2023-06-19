@@ -30,6 +30,11 @@
 
 			require 'conexion.php';
 
+			$sql2= "SELECT * FROM alumnos WHERE id_alumno='$id_alumno'";
+			$resultado2 = $mysqli->query($sql2);
+
+    		$fila2 = $resultado2->fetch_assoc();
+
 			
 			$sql = "DELETE FROM entradas WHERE id_alumno='$id_alumno'";
 
@@ -53,7 +58,7 @@
 			}
 		?>
 			<br>
-			<p><a href="index.php" class="btn btn-outline-dark">Regresar</a></p>
+			<p><a href="alumnos.php?id_empresa=<?php echo $fila2['id_empresa']; ?>" class="btn btn-outline-dark">Ver alumnos</a></p>
 
 		</div>
     

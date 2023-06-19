@@ -41,6 +41,7 @@
     <div class="form-group">
 
         <input type="hidden" name="id_alumno" value="<?php echo $fila['id_alumno']; ?>">
+        <input type="hidden" name="id_empresa" value="<?php echo $fila['id_empresa']; ?>">
 
         <label for="nombre">Nombre: </label>
 		<input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $fila['nombre'];?>" required>

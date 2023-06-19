@@ -12,11 +12,6 @@
     $resultado2 = $mysqli->query($sql2);
 
     $fila2 = $resultado2->fetch_assoc();
-
-    // echo $fila2['nombre'];
-    // echo $fila2['apellidos'];
-
-    
 ?>
 
 <!DOCTYPE html>

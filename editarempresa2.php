@@ -36,6 +36,14 @@
 
 	<?php
 
+	$sql1 = "SELECT * FROM empresas WHERE cif = '$cif'";
+	$resultado1 = $mysqli->query($sql1);
+	if (mysqli_num_rows($resultado1) > 0) {
+
+	echo '<p class="alert alert-danger" role="alert">La empresa ya esta registrada.</p>';
+
+	} else {
+
     $sql = "UPDATE empresas SET nombre='$nombreemp', localizacion='$localizacion', cif='$cif' WHERE id_empresa=$id_empresa";
 
     $resultado = $mysqli->query($sql);
@@ -51,6 +59,7 @@
   				<p class="alert alert-danger" role="alert">Ha ocurrido un error.</p>
 		<?php
 			}
+		}
 		?>
 			<br>
 			<p><a href="index.php" class="btn btn-outline-dark">Regresar</a></p>

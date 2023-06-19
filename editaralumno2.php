@@ -19,6 +19,7 @@
     require 'conexion.php';
     
     $id_alumno=$_POST['id_alumno'];
+	$id_empresa=$_POST['id_empresa'];
     $nombre=$_POST['nombre'];
     $apellidos=$_POST['apellidos'];
     $dni=$_POST['dni'];
@@ -37,6 +38,15 @@
 
 	<?php
 
+	$sql1 = "SELECT * FROM alumnos WHERE dni = '$dni'";
+	$resultado1 = $mysqli->query($sql1);
+	if (mysqli_num_rows($resultado1) > 0) {
+
+		echo '<p class="alert alert-danger" role="alert">El dni introducido ya esta registrado.</p>';
+
+	} else {
+
+
     $sql = "UPDATE alumnos SET nombre='$nombre', apellidos='$apellidos', dni='$dni', fecha_nac='$fecha_nac' WHERE id_alumno=$id_alumno";
 
     $resultado = $mysqli->query($sql);
@@ -52,8 +62,9 @@
   				<p class="alert alert-danger" role="alert">Ha ocurrido un error.</p>
 		<?php
 			}
+		}
 		?>
 			<br>
-			<p><a href="index.php" class="btn btn-outline-dark">Regresar</a></p>
+			<p><a href="alumnos.php?id_empresa=<?php echo $id_empresa; ?>" class="btn btn-outline-dark">Ver alumnos</a></p>
 </body>
 </html>
